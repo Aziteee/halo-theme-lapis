@@ -203,7 +203,7 @@ mark {
 
 .write+p,
 .write blockquote p {
-    font-size: 1.1rem;
+    /* font-size: 1.1rem; */
     padding-top: .2rem;
     padding-bottom: .2rem;
     margin: 0;
@@ -293,7 +293,8 @@ mark {
 }
 
 .write h3 {
-    margin: 1em 0 1em;
+    margin-top: 1em;
+    margin-bottom: 1em;
 }
 
 .write h4 {

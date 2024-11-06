@@ -4,7 +4,7 @@
   th:replace="~{modules/layout :: html(title = ${site.title}, header = ~{modules/header::header}, content = ~{::content})}"
 >
   <th:block th:fragment="content">
-    <div class="write">
+    <div class="write px-4">
       <div>
         <h3>Archives</h3>
         <div th:each="archive : ${archives}">

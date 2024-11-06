@@ -3,7 +3,7 @@
   xmlns:th="https://www.thymeleaf.org"
   th:replace="~{modules/layout :: html(title = ${singlePage.spec.title}, header = ~{modules/header::header}, content = ~{::content})}"
 >
-  <th:block th:fragment="content">
+  <div th:fragment="content" class="p-x-4">
     <article class="write mb-20">
       <h1 th:if="${!singlePage.status.permalink.contains('/about')}" th:text="${singlePage.spec.title}"></h1>
       <th:block th:utext="${singlePage.content.content}" />
@@ -16,5 +16,5 @@
         colorScheme="commentColorScheme"
       />
     </th:block>
-  </th:block>
+  </div>
 </html>

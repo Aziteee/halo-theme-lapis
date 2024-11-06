@@ -6,11 +6,11 @@
   <th:block th:fragment="content">
     <div class="write">
       <div>
-        <h3>Recent Posts</h3>
+        <h3 class="ml-4">Recent Posts</h3>
         <div class="flex flex-col gap-5">
           <div
             th:each="post : ${posts.items}"
-            class="flex flex-col p-y-4 hover:shadow-md hover:bgc-primary4 transition duration-300 rounded-lg cursor-default"
+            class="flex flex-col p-y-4 p-x-4 hover:shadow-md hover:bgc-primary4 transition duration-300 rounded-lg cursor-default"
             th:onclick="|window.location.href='@{${post.status.permalink}}'|"
           >
             <span th:text="${post.spec.title}" class="text-lg mb-3 textc-primary"></span>
