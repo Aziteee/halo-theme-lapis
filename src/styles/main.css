@@ -1,14 +1,21 @@
-body,html {
+body,
+html {
   height: 100vh;
   width: 100vw;
   margin: 0;
   padding: 0;
-  box-sizing:border-box
+  box-sizing: border-box;
+  background-color: var(--bg-color);
+  color: var(--text-color);
 }
 
 .write blockquote {
   margin-left: 0px;
   margin-right: 0px;
+}
+
+h2 > strong {
+  color: var(--text-color) !important;
 }
 
 button {
@@ -28,6 +35,10 @@ button:hover {
 .title {
   color: var(--primary-color);
   font-family: "STZhongsong";
+}
+
+.subtitle {
+  columns: var(--secondary-text-color);
 }
 
 .hljs-copy-wrapper {

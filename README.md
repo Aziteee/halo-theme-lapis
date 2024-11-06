@@ -1,4 +1,4 @@
-# Halo Theme Lapis
+<h1 align="center">Halo Theme Lapis</h1>
 
 <p align="center">一款简洁、以蓝色为主色调的 Halo 主题</p>
 
@@ -17,4 +17,4 @@
 ## TODO
 
 - [ ] 支持[瞬间](https://halo.run/store/apps/app-SnwWD)插件
-- [ ] 支持暗黑模式
+- [X] 支持暗黑模式

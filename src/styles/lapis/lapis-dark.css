@@ -6,8 +6,11 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --text-color: #e4e4e4e3;
+    --secondary-text-color: #a2a2a2;
     /* Text */
     --primary-color: #8393ad;
+    --primary-color-2: #a0b3d1;
+    --primary-color-3: #5e6a7d;
     /* Primary Color */
     --bg-color: #1e222a;
     --side-bar-bg-color: #181c24;
