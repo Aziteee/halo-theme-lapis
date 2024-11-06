@@ -18,27 +18,8 @@ h2 > strong {
   color: var(--text-color) !important;
 }
 
-button {
-  background-color: var(--primary-color-3);
-  color: white;
-  border: none;
-}
-
 button.selected {
-  background-color: var(--primary-color);
-}
-
-button:hover {
-  background-color: var(--primary-color-2);
-}
-
-.title {
-  color: var(--primary-color);
-  font-family: "STZhongsong";
-}
-
-.subtitle {
-  columns: var(--secondary-text-color);
+  background-color: var(--primary-color) !important;
 }
 
 .hljs-copy-wrapper {
