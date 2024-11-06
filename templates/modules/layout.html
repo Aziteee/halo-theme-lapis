@@ -1,14 +1,31 @@
 <!DOCTYPE html>
-<html lang="en" th:fragment="html (content)">
+<html lang="en" th:fragment="html (title, header, content)">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title th:text="${site.title}"></title>
-    <link rel="stylesheet" th:href="@{/assets/dist/style.css}" href="./assets/dist/style.css" />
-    <script th:src="@{/assets/dist/main.iife.js}"></script>
+    <title th:text="${title}"></title>
+    <link rel="stylesheet" th:href="@{/assets/dist/style.css(v=${theme.spec.version})}" />
+    <script th:src="@{/assets/dist/main.iife.js(v=${theme.spec.version})}"></script>
+    <script>
+      window.addEventListener("load", function () {
+        main.init();
+      });
+    </script>
   </head>
-  <body th:style="'background-color: '+${theme.config.styles.background_color}">
-    <th:block th:replace="${content}" />
+  <body class="min-h-screen flex flex-col">
+    <main class="flex-grow">
+      <div class="">
+        <th:block th:replace="${header}" />
+        <div th:insert="${content}" class="mx-auto px-4 sm:px-6 lg:px-8 max-w-800px mt-40px"></div>
+      </div>
+    </main>
+    <footer class="py-4">
+      <div class="container mx-auto text-center">
+        <p class="text-sm">
+          © [[${#dates.format(#dates.createNow(), 'yyyy')}]] [[${site.title}]]. All rights reserved.
+        </p>
+      </div>
+    </footer>
   </body>
 </html>

@@ -1,0 +1,10 @@
+<th:block th:fragment="menu">
+  <div class="flex space-x-4">
+    <button
+      th:each="menuItem : ${menuFinder.getPrimary().menuItems}"
+      th:text="${menuItem.status?.displayName}"
+      th:href="${menuItem.status?.href}"
+      class="menu-button px-4 py-2 rounded"
+    ></button>
+  </div>
+</th:block>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html
+  xmlns:th="https://www.thymeleaf.org"
+  th:replace="~{modules/layout :: html(title = 'Links', header = ~{modules/header::header}, content = ~{::content})}"
+>
+  <th:block th:fragment="content">
+    <div class="write">
+      <div th:each="group : ${groups}" th:if="${not #lists.isEmpty(group.links)}">
+        <h3 th:text="${group.spec.displayName}"></h3>
+        <ul>
+          <li th:each="link : ${group.links}" class="line-height-loose">
+            <a th:href="@{${link.spec.url}}" th:text="${link.spec.displayName}"></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </th:block>
+</html>

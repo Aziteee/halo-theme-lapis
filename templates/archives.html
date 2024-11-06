@@ -6,7 +6,7 @@
   <th:block th:fragment="content">
     <div class="write">
       <div>
-        <h3>Recent Posts</h3>
+        <h3>Archives</h3>
         <ul>
           <li th:each="post : ${posts.items}" class="line-height-loose">
             <a th:href="@{${post.status.permalink}}" th:text="${post.spec.title}"></a>

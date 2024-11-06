@@ -1,23 +1,20 @@
-# Theme Vite Starter
+# Halo Theme Lapis
 
-一个集成了 Vite 的主题快速开始模板。
+<p align="center">一款简洁、以蓝色为主色调的 Halo 主题</p>
 
-主题开发文档可查阅：<https://docs.halo.run/2.0.0-SNAPSHOT/developer-guide/theme/prepare>
+<p align="center"><a target="_blank" href="https://github.com/YiNNx/typora-theme-lapis">根据 Typora 主题 lapis 二次开发</a></p>
 
-## 开发
+[![pAsv1Fx.jpg](https://s21.ax1x.com/2024/11/06/pAsv1Fx.jpg)](https://imgse.com/i/pAsv1Fx)
 
-```bash
-git clone git@github.com:halo-dev/theme-vite-starter.git ~/halo2-dev/themes/theme-vite-starter
-```
+## 预览
 
-```bash
-cd ~/halo2-dev/themes/theme-vite-starter
-```
+[雨化田](https://blog.azite.cn/)
 
-```bash
-pnpm install 
-```
+## 插件支持
 
-```bash
-pnpm dev
-```
+- [X] 友情链接（/links）：https://halo.run/store/apps/app-hfbQg
+
+## TODO
+
+- [ ] 支持[瞬间](https://halo.run/store/apps/app-SnwWD)插件
+- [ ] 支持暗黑模式
