@@ -9,11 +9,13 @@
       <p th:text="${#dates.format(post.spec.publishTime, 'yyyy-MM-dd')}" class="text-center text-sm mt-2 mb-8"></p>
       <th:block th:utext="${post.content.content}" />
     </article>
-    <halo:comment
-      group="content.halo.run"
-      kind="Post"
-      th:name="${post.metadata?.name}"
-      colorScheme="commentColorScheme"
-    />
+    <th:block th:if="${haloCommentEnabled}">
+      <halo:comment
+        group="content.halo.run"
+        kind="Post"
+        th:name="${post.metadata?.name}"
+        colorScheme="commentColorScheme"
+      />
+    </th:block>
   </th:block>
 </html>
