@@ -1,0 +1,16 @@
+<footer fragment="footer" class="py-4">
+  <div class="container mx-auto text-center text-sm">
+    <p>
+      © [[${#dates.format(#dates.createNow(), 'yyyy')}]] [[${site.title}]]. All rights reserved.
+      <th:block th:if="${theme.config.global.beian!=''}">
+        <br />
+        <a
+          th:text="${theme.config.global.beian}"
+          href="https://beian.miit.gov.cn"
+          target="_blank"
+          class="line-height-loose no-underline color-inherit"
+        ></a>
+      </th:block>
+    </p>
+  </div>
+</footer>

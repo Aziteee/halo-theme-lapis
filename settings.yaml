@@ -1,13 +1,14 @@
 apiVersion: v1alpha1
 kind: Setting
 metadata:
-  name: theme-vite-starter-setting
+  name: halo-theme-lapis-setting
 spec:
   forms:
-    - group: styles
-      label: 样式
+    - group: global
+      label: 全局
       formSchema:
-        - $formkit: color
-          name: background_color
-          label: 背景颜色
-          value: "#f2f2f2"
+        - $formkit: text
+          name: beian
+          label: 备案号
+          value: ""
+          help: 备案号会显示在所有页面最下方

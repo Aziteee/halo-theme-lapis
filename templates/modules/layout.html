@@ -20,12 +20,6 @@
         <div th:insert="${content}" class="mx-auto px-4 sm:px-6 lg:px-8 max-w-800px mt-40px"></div>
       </div>
     </main>
-    <footer class="py-4">
-      <div class="container mx-auto text-center">
-        <p class="text-sm">
-          © [[${#dates.format(#dates.createNow(), 'yyyy')}]] [[${site.title}]]. All rights reserved.
-        </p>
-      </div>
-    </footer>
+    <th:block th:replace="~{modules/footer::footer}" />
   </body>
 </html>
