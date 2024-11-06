@@ -7,12 +7,17 @@
     <div class="write">
       <div>
         <h3>Archives</h3>
-        <ul>
-          <li th:each="post : ${posts.items}" class="line-height-loose">
-            <a th:href="@{${post.status.permalink}}" th:text="${post.spec.title}"></a>
-            <span th:text="${#dates.format(post.spec.publishTime, 'yyyy-MM-dd')}" class="ml-1.5 text-sm"></span>
-          </li>
-        </ul>
+        <div th:each="archive : ${archives}">
+          <h2 th:text="${archive.year}"></h2>
+          <ul class="flex-auto">
+            <th:block th:each="month : ${archive.months}">
+              <li class="line-height-loose" th:each="post : ${month.posts}">
+                <a th:href="@{${post.status.permalink}}" th:text="${post.spec.title}"></a>
+                <span th:text="${#dates.format(post.spec.publishTime, 'yyyy-MM-dd')}" class="ml-1.5 text-sm"></span>
+              </li>
+            </th:block>
+          </ul>
+        </div>
       </div>
     </div>
   </th:block>
