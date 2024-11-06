@@ -4,7 +4,6 @@ html {
   width: 100vw;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
   background-color: var(--bg-color);
   color: var(--text-color);
 }
@@ -12,6 +11,10 @@ html {
 .write blockquote {
   margin-left: 0px;
   margin-right: 0px;
+}
+
+h2 {
+  font-size: 1.3rem;
 }
 
 h2 > strong {
