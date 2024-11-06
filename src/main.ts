@@ -12,6 +12,7 @@ export function init() {
     });
     if (button.getAttribute("href") === window.location.pathname) {
       button.classList.add("selected");
+      button.classList.add("shadow-button");
     }
   });
 }
