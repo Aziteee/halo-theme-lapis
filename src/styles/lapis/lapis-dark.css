@@ -9,8 +9,9 @@
     --secondary-text-color: #a2a2a2;
     /* Text */
     --primary-color: #8393ad;
-    --primary-color-2: #a0b3d1;
-    --primary-color-3: #5e6a7d;
+    --primary2-color: #a0b3d1;
+    --primary3-color: #5e6a7d;
+    --primary4-color: rgba(131, 147, 173, 0.02);
     /* Primary Color */
     --bg-color: #1e222a;
     --side-bar-bg-color: #181c24;

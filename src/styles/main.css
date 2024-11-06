@@ -34,5 +34,5 @@ button.selected {
 }
 
 .shadow-button {
-  filter: drop-shadow(var(--img-shadow-color) 0px 3px 3px)
+  filter: drop-shadow(var(--img-shadow-color) 0px 3px 3px);
 }
