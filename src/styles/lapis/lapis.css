@@ -472,7 +472,7 @@ li.md-list-item {
     filter: drop-shadow(var(--img-shadow-color) 0px 6px 6px);
     display: block;
     margin: 0 auto;
-    padding: 1rem;
+    /* padding: 1rem; */
 }
 
 /*
