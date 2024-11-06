@@ -10,5 +10,6 @@ export default defineConfig({
     [/^textc-(.+)$/, ([, colorName]) => ({ color: `var(--${colorName}-color)` })],
     [/^(.+)\$(.+)$/, ([, property, colorName]) => ({ [property]: `var(--${colorName}-color)` })],
     ["font-zhongsong", { "font-family": '"STZhongsong"' }],
+    [/^size-(\d+)$/, ([, d]) => ({ width: `${Number(d) / 4}rem`, height: `${Number(d) / 4}rem` })],
   ],
 });

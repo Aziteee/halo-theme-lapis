@@ -5,7 +5,11 @@ html {
   margin: 0;
   padding: 0;
   background-color: var(--bg-color);
+}
+
+* {
   color: var(--text-color);
+  box-sizing: border-box;
 }
 
 .write blockquote {

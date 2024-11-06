@@ -4,14 +4,20 @@
   th:replace="~{modules/layout :: html(title = 'Links', header = ~{modules/header::header}, content = ~{::content})}"
 >
   <th:block th:fragment="content">
-    <div class="write">
+    <div>
       <div th:each="group : ${groups}" th:if="${not #lists.isEmpty(group.links)}">
-        <h3 th:text="${group.spec.displayName}"></h3>
-        <ul>
-          <li th:each="link : ${group.links}" class="line-height-loose">
-            <a th:href="@{${link.spec.url}}" th:text="${link.spec.displayName}"></a>
-          </li>
-        </ul>
+        <h3 th:text="${group.spec.displayName}" class="textc-primary"></h3>
+        <div class="container mx-auto p-4">
+          <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+            <div th:each="link : ${group.links}" class="flex flex-col rounded-lg p-4 hover:shadow-md transition duration-300">
+              <div class="flex justify-center mb-2">
+                <img th:src="${link.spec.logo}" th:alt="${link.spec.displayName}" class="size-17 rounded-full object-cover">
+              </div>
+              <span th:text="${link.spec.displayName}" class="text-base mb-2 text-center"></span>
+              <span th:text="${link.spec.description}" class="text-center text-xs textc-secondary-text"></span>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </th:block>
