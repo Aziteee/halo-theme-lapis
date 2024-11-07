@@ -4,6 +4,7 @@
       th:each="menuItem : ${menuFinder.getPrimary().menuItems}"
       th:text="${menuItem.status?.displayName}"
       th:href="${menuItem.status?.href}"
+      th:onclick="|window.location.href='@{${menuItem.status?.href}}'|"
       class="menu-button px-4 py-2 rounded bgc-primary3 hover:bgc-primary2 transition duration-300 border-0 color-white text-3.5"
     ></button>
   </div>
