@@ -1,11 +1,21 @@
 import { defineConfig } from "vite";
 import { fileURLToPath } from "url";
+import fg from 'fast-glob';
 import path from "path";
-import UnoCSS from 'unocss/vite'
+import UnoCSS from "unocss/vite";
 
 export default defineConfig({
   plugins: [
     UnoCSS(),
+    {
+      name: "watch-templates",
+      async buildStart() {
+        const files = await fg(["./templates/**/*.html"]);
+        for (const file of files) {
+          this.addWatchFile(file);
+        }
+      },
+    },
   ],
   build: {
     outDir: fileURLToPath(new URL("./templates/assets/dist", import.meta.url)),
@@ -15,6 +25,6 @@ export default defineConfig({
       name: "main",
       fileName: "main",
       formats: ["iife"],
-    }
+    },
   },
 });
