@@ -27,4 +27,22 @@
       </div>
     </div>
   </div>
+  <div class="flex justify-between items-center my-8 p-x-4">
+    <div>
+      <a
+        th:href="@{${posts.prevUrl}}"
+        th:if="${posts.hasPrevious()}"
+        class="cursor-default no-underline border border-solid border-2 borderc-primary p-1.5 text-sm rounded hover:bgc-primary hover:textc-text transition duration-300"
+        >Previous Page</a
+      >
+    </div>
+    <div>
+      <a
+        th:href="@{${posts.nextUrl}}"
+        th:if="${posts.hasNext()}"
+        class="cursor-default no-underline border border-solid border-2 borderc-primary p-1.5 text-sm rounded hover:bgc-primary hover:textc-text transition duration-300"
+        >Next Page</a
+      >
+    </div>
+  </div>
 </div>

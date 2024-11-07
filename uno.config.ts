@@ -7,6 +7,7 @@ export default defineConfig({
   },
   rules: [
     [/^bgc-(.+)$/, ([, colorName]) => ({ "background-color": `var(--${colorName}-color)` })],
+    [/^borderc-(.+)$/, ([, colorName]) => ({ "border-color": `var(--${colorName}-color)` })],
     [/^textc-(.+)$/, ([, colorName]) => ({ color: `var(--${colorName}-color)` })],
     [/^(.+)\$(.+)$/, ([, property, colorName]) => ({ [property]: `var(--${colorName}-color)` })],
     ["font-zhongsong", { "font-family": '"STZhongsong"' }],
