@@ -1,3 +1,7 @@
+<p align="center">
+  <img alt="Lapis Logo" src="https://s21.ax1x.com/2024/11/07/pAyM9ot.png" width="100">
+</p>
+
 <h1 align="center">Halo Theme Lapis</h1>
 
 <p align="center">一款简洁、以蓝色为主色调的 Halo 主题</p>
@@ -16,5 +20,9 @@
 
 ## TODO
 
+- [X] 适配深色模式
 - [ ] 支持[瞬间](https://halo.run/store/apps/app-SnwWD)插件
-- [X] 支持暗黑模式
+- [ ] 自定义页面标题
+- [ ] 自定义主题色
+
+欢迎PR！
