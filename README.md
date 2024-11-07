@@ -4,7 +4,7 @@
 
 <p align="center"><a target="_blank" href="https://github.com/YiNNx/typora-theme-lapis">根据 Typora 主题 lapis 二次开发</a></p>
 
-[![pAsv1Fx.jpg](https://s21.ax1x.com/2024/11/06/pAsv1Fx.jpg)](https://imgse.com/i/pAsv1Fx)
+[![pAyefH0.png](https://s21.ax1x.com/2024/11/07/pAyefH0.png)](https://imgse.com/i/pAyefH0)
 
 ## 预览
 
