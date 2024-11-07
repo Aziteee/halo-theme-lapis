@@ -8,7 +8,7 @@ spec:
     name: Azite
     website: https://github.com/Aziteee
   description: A clean Halo theme in blue tones
-  logo: https://www.halo.run/logo
+  logo: /themes/halo-theme-lapis/assets/images/logo.png
   homepage: https://github.com/Aziteee/halo-theme-lapis#readme
   repo: https://github.com/Aziteee/halo-theme-lapis
   issues: https://github.com/Aziteee/halo-theme-lapis/issues
