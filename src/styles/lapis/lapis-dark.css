@@ -41,6 +41,10 @@
     --window-border: 1px solid var(--bg-color);
     --control-text-hover-color: var(--text-color);
     --rawblock-edit-panel-bd: var(--block-bg-color);
+
+    /* Comment Plugin */
+    --halo-comment-widget-component-form-button-submit-bg-color: var(--primary3-color);
+    --halo-comment-widget-component-form-button-submit-border-color: var(--primary3-color);
   }
 
   /*

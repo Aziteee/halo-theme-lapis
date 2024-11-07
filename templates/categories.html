@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html
+  xmlns:th="https://www.thymeleaf.org"
+  th:replace="~{modules/layout :: html(title = 'Categories', header = ~{modules/header::header}, content = ~{::content})}"
+>
+  <th:block th:fragment="content">
+    <div class="write px-4">
+      <div>
+        <h3>Categories</h3>
+        <ul th:if="${!#lists.isEmpty(categories)}" class="flex-auto">
+          <th:block th:each="category : ${categories}">
+            <li>
+              <a th:href="@{${category.status?.permalink}}">
+                <th:block th:text="${category.spec?.displayName}"></th:block>
+              </a>
+            </li>
+          </th:block>
+        </ul>
+      </div>
+    </div>
+  </th:block>
+</html>

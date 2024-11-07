@@ -1,0 +1,30 @@
+<div class="flex flex-col gap-5" th:fragment="postsList (posts)">
+  <div
+    th:each="post : ${posts.items}"
+    class="flex flex-col p-y-4 p-x-4 hover:shadow-md hover:bgc-primary4 transition duration-300 rounded-lg cursor-default"
+    th:onclick="|window.location.href='@{${post.status.permalink}}'|"
+  >
+    <span th:text="${post.spec.title}" class="text-lg mb-3 textc-primary"></span>
+    <div th:text="${post.status?.excerpt + '...'}" class="mb-2"></div>
+    <div class="flex justify-between items-center h-4">
+      <span th:text="${#dates.format(post.spec.publishTime, 'yyyy-MM-dd')}" class="text-3.2"></span>
+      <div class="flex items-center h-100%">
+        <span th:href="@{${post.status.permalink}}" class="textc-primary text-3.2 mr-1">Read More</span>
+        <svg
+          t="1730904461222"
+          class="h-90% w-auto"
+          viewBox="0 0 1024 1024"
+          version="1.1"
+          xmlns="http://www.w3.org/2000/svg"
+          p-id="1441"
+        >
+          <path
+            fill="var(--primary-color)"
+            d="M557.397333 167.204571l293.059048 293.059048L902.192762 512l-51.712 51.712-293.059048 293.083429-51.736381-51.712L762.148571 548.571429H121.904762v-73.142858h640.243809L505.660952 218.940952l51.736381-51.736381z"
+            p-id="1442"
+          ></path>
+        </svg>
+      </div>
+    </div>
+  </div>
+</div>

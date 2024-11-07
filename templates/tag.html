@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html
   xmlns:th="https://www.thymeleaf.org"
-  th:replace="~{modules/layout :: html(title = ${site.title}, header = ~{modules/header::header}, content = ~{::content})}"
+  th:replace="~{modules/layout :: html(title = ${tag.spec.displayName}, header = ~{modules/header::header}, content = ~{::content})}"
 >
   <th:block th:fragment="content">
     <div class="write">
       <div>
-        <h3 class="ml-4">Recent Posts</h3>
+        <h3 th:text="${tag.spec.displayName}" class="ml-4"></h3>
         <th:block th:replace="~{modules/postsList :: postsList(posts = ${posts})}" />
       </div>
     </div>

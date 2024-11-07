@@ -6,6 +6,7 @@ html {
   padding: 0;
   background-color: var(--bg-color);
   overflow-x: hidden;
+  overflow-y: overlay;
 }
 
 * {
@@ -23,7 +24,7 @@ h2 {
 }
 
 h2 > strong {
-  color: var(--text-color) !important;
+  color: #f6f8fa !important;
 }
 
 button.selected {

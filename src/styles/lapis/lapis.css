@@ -35,6 +35,10 @@
     --rawblock-edit-panel-bd: var(--block-bg-color);
     --item-hover-bg-color: rgb(246 248 250);
     --active-file-bg-color: var(--block-bg-color);
+
+    /* Comment Plugin */
+    --halo-comment-widget-component-form-button-submit-bg-color: var(--primary-color);
+    --halo-comment-widget-component-form-button-submit-border-color: var(--primary-color);
 }
 
 @media print {
@@ -745,7 +749,7 @@ pre.md-fences-advanced.md-focus .md-fences-adv-panel {
 }
 
 ::-webkit-scrollbar {
-    width: 1rem;
+    width: .5rem;
 }
 
 /* 
