@@ -4,7 +4,7 @@
     class="flex flex-col p-y-4 p-x-4 hover:shadow-md hover:bgc-primary4 transition duration-300 rounded-lg cursor-default"
     th:onclick="|window.location.href='@{${post.status.permalink}}'|"
   >
-    <span th:text="${post.spec.title}" class="text-lg mb-3 textc-primary"></span>
+    <span th:text="${post.spec.title}" class="text-lg font-semibold mb-3 textc-primary"></span>
     <div th:text="${post.status?.excerpt + '...'}" class="mb-2"></div>
     <div class="flex justify-between items-center h-4">
       <span th:text="${#dates.format(post.spec.publishTime, 'yyyy-MM-dd')}" class="text-3.2"></span>
