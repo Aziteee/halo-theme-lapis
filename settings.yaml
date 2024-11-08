@@ -7,6 +7,10 @@ spec:
     - group: global
       label: 全局
       formSchema:
+        - $formkit: checkbox
+          name: enable_resize_image
+          label: 自动缩放图片
+          value: true
         - $formkit: text
           name: beian
           label: 备案号

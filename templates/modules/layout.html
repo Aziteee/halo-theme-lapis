@@ -7,12 +7,16 @@
     <title th:text="${title}"></title>
     <link rel="stylesheet" th:href="@{/assets/dist/style.css(v=${theme.spec.version})}" />
     <script th:src="@{/assets/dist/main.iife.js(v=${theme.spec.version})}"></script>
-    <script>
+    <script th:inline="javascript">
       window.addEventListener("load", function () {
         main.init();
+        if (/*[[${theme.config.global.enable_resize_image}]]*/ false) {
+          main.enableResizeImage();
+        }
       });
     </script>
   </head>
+
   <body class="color-scheme-auto min-h-screen flex flex-col">
     <main class="flex-grow">
       <div>
