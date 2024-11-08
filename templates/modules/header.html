@@ -1,5 +1,8 @@
 <div th:fragment="header" class="mt-20">
-  <h1 th:text="${site.title}" class="text-5xl font-bold text-center pt-0.9 mb-3 font-zhongsong textc-primary"></h1>
+  <h1
+    th:text="${site.title}"
+    class="text-5xl font-bold text-center pt-0.9 mb-3 font-source-han-serif textc-primary"
+  ></h1>
   <p th:text="${site.subtitle}" class="text-center pb-1.5 text-sm textc-secondary-text"></p>
   <div th:insert="~{modules/menu :: menu}" class="flex justify-center mt-8"></div>
 </div>

@@ -55,10 +55,10 @@
  * Font-face for Cantarell, Source Han Serif CN and JetBrains Mono
  */
 
-/* @font-face {
+@font-face {
     font-family: "Cantarell";
     src: url('fonts/Cantarell-VF-fixed.otf');
-} */
+}
 
 /* @font-face {
     font-family: "JetBrainsMono";
@@ -91,7 +91,7 @@
     word-wrap: break-word;
     text-align: justify;
 
-    font-family: 'Cantarell', 'SourceHanSerifCN', 'JetBrainsMono';
+    font-family: "Cantarell";
     /* margin-bottom: 20rem; */
 }
 
@@ -121,7 +121,7 @@
 
 .write a {
     color: var(--primary-color);
-    /* font-family: "Cantarell"; */
+    font-family: "Cantarell";
 }
 
 .write .md-p a,
@@ -180,7 +180,7 @@ mark {
 .write h4,
 .write h5,
 .write h6 {
-    /* font-family: "SourceHanSerifCN"; */
+    font-family: "Cantarell";
     padding: 0px;
     color: var(--primary-color);
 }
@@ -339,7 +339,7 @@ blockquote h6.md-focus:before {
     border-radius: 4px;
     margin: 2px;
     background-color: var(--block-bg-color);
-    font-family: 'JetBrainsMono';
+    /* font-family: 'JetBrainsMono'; */
     word-break: break-all;
 }
 
@@ -392,7 +392,7 @@ blockquote h6.md-focus:before {
 }
 
 .write table tr th {
-    font-family: SourceHanSerifCN;
+    font-family: "Cantarell";
     text-align: center;
     min-width: 10rem;
     font-weight: bold;
