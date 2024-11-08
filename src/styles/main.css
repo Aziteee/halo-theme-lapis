@@ -40,5 +40,5 @@ button.selected {
 }
 
 .shadow-button {
-  filter: drop-shadow(var(--img-shadow-color) 0px 3px 3px);
+  box-shadow: rgba(0, 0, 0, 0.10) 0px 4px 6px;
 }

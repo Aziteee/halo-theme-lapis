@@ -12,7 +12,7 @@
           <ul class="flex-auto">
             <th:block th:each="month : ${archive.months}">
               <li class="line-height-loose" th:each="post : ${month.posts}">
-                <a th:href="@{${post.status.permalink}}" th:text="${post.spec.title}"></a>
+                <a th:href="@{${post.status.permalink}}" th:text="${post.spec.title}" class="no-underline"></a>
                 <span th:text="${#dates.format(post.spec.publishTime, 'yyyy-MM-dd')}" class="ml-1.5 text-sm"></span>
               </li>
             </th:block>
