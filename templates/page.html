@@ -3,7 +3,7 @@
   xmlns:th="https://www.thymeleaf.org"
   th:replace="~{modules/layout :: html(title = ${singlePage.spec.title}, header = ~{modules/header::header}, content = ~{::content})}"
 >
-  <div th:fragment="content" class="">
+  <div th:fragment="content" class="px-4">
     <article class="write mb-20">
       <h1 th:if="${!singlePage.status.permalink.contains('/about')}" th:text="${singlePage.spec.title}"></h1>
       <th:block th:utext="${singlePage.content.content}" />

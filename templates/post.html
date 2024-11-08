@@ -3,7 +3,7 @@
   xmlns:th="https://www.thymeleaf.org"
   th:replace="~{modules/layout :: html(title = ${post.spec.title}, header = ~{modules/header::header}, content = ~{::content})}"
 >
-  <div th:fragment="content" class="">
+  <div th:fragment="content" class="px-4">
     <article class="write mb-20">
       <h1 th:text="${post.spec.title}" style="margin-bottom: 0rem"></h1>
       <p th:text="${#dates.format(post.spec.publishTime, 'yyyy-MM-dd')}" class="text-center text-sm mt-2 mb-8"></p>
