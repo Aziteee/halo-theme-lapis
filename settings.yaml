@@ -17,3 +17,11 @@ spec:
           label: 备案号
           value: ""
           help: 备案号会显示在所有页面最下方
+    - group: links
+      label: 链接
+      formSchema:
+        - $formkit: checkbox
+          name: round_avatar
+          label: 圆形 Logo
+          value: true
+          help: 开启后，网站 Logo 会显示为圆形，否则为方形。
