@@ -14,8 +14,8 @@
                 <img th:src="@{${link.spec.logo}}" th:alt="${link.spec.displayName}" class="size-17 object-cover" x-bind:class="{ 'rounded-full': roundAvatar, 'rounded-lg': !roundAvatar }" @error="isFallback = true">
               </template>
               <template x-if="isFallback">
-                <div x-bind:class="{ 'rounded-full': roundAvatar, 'rounded-lg': !roundAvatar }" class="size-17 bg-gray-100 text-gray-600 dark:bg-gray-300 dark:text-gray-600 flex items-center justify-center text-2xl">
-                  <span x-text="name.charAt(0)"></span>
+                <div x-bind:class="{ 'rounded-full': roundAvatar, 'rounded-lg': !roundAvatar }" class="size-17 bg-gray-100 dark:bgc-primary3 flex items-center justify-center text-2xl">
+                  <span class="text-gray-500 dark:text-gray-100" x-text="name.charAt(0)"></span>
                 </div>
               </template>
             </div>

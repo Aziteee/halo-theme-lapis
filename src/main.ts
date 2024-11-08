@@ -36,4 +36,19 @@ export function enableResizeImage() {
   window.addEventListener("resize", resizeImage);
 }
 
+Alpine.data("prefersColorScheme", () => ({
+  colorScheme: "light",
+  colorSchemeQuery: {},
+  init() {
+      this.colorSchemeQuery = window.matchMedia("(prefers-color-scheme: dark)");
+      (this.colorSchemeQuery as MediaQueryList).addEventListener("change", () => {
+        this.updateColorScheme();
+      });
+      this.updateColorScheme();
+  },
+  updateColorScheme() {
+    this.colorScheme = (this.colorSchemeQuery as MediaQueryList).matches? "dark" : "light";
+  }
+}));
+
 Alpine.start();
