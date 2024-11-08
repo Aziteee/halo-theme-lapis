@@ -9,9 +9,15 @@
       <div class="container mx-auto p-4">
         <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
           <div th:each="link : ${group.links}" class="flex flex-col rounded-lg p-4 hover:shadow-card transition duration-300 cursor-default" th:onclick="|window.location.href='@{${link.spec.url}}'|">
-            <div class="flex justify-center mb-2 h-17">
-              <img th:src="@{${link.spec.logo}}" th:alt="${link.spec.displayName}" class="size-17 rounded-full object-cover" onerror="showFallback(this)">
-              <div class="size-17 rounded-full bg-gray-200 text-gray-700 dark:bg-gray-300 dark:text-gray-600 flex items-center justify-center text-2xl" style="display: none;"></div>
+            <div class="flex justify-center mb-2 h-17" th:attr="x-data=|{ isFallback: false, name: `${link.spec.displayName}` }|">
+              <template x-if="!isFallback">
+                <img th:src="@{${link.spec.logo}}" th:alt="${link.spec.displayName}" class="size-17 rounded-full object-cover" @error="isFallback = true">
+              </template>
+              <template x-if="isFallback">
+                <div class="size-17 rounded-full bg-gray-100 text-gray-600 dark:bg-gray-300 dark:text-gray-600 flex items-center justify-center text-2xl">
+                  <span x-text="name.charAt(0)"></span>
+                </div>
+              </template>
             </div>
             <span th:text="${link.spec.displayName}" class="text-base mb-1 text-center"></span>
             <span th:text="${link.spec.description}" class="text-center text-xs textc-secondary-text"></span>
@@ -20,15 +26,6 @@
       </div>
     </div>
   </div>
-  <script>
-    function showFallback(img) {
-      const name = img.getAttribute("alt");
-      const fallback = img.nextElementSibling;
-      img.style.display = "none";
-      fallback.style.display = "flex";
-      fallback.textContent = name.charAt(0);
-    }
-  </script>
 </th:block>
 
 </html>

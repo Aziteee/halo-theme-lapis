@@ -9,7 +9,6 @@
     <script th:src="@{/assets/dist/main.iife.js(v=${theme.spec.version})}"></script>
     <script th:inline="javascript">
       window.addEventListener("load", function () {
-        main.init();
         if (/*[[${theme.config.global.enable_resize_image}]]*/ false) {
           main.enableResizeImage();
         }

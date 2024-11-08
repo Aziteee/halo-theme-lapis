@@ -5,7 +5,9 @@
       th:text="${menuItem.status?.displayName}"
       th:href="${menuItem.status?.href}"
       th:onclick="|window.location.href='@{${menuItem.status?.href}}'|"
-      class="menu-button px-4 py-2 rounded bgc-primary3 hover:bgc-primary hover:shadow-button transition duration-300 border-0 color-white text-3.5"
+      th:attr="x-data=|{ isActive: window.location.pathname === `${menuItem.status?.href}` }|"
+      x-bind:class="{ 'shadow-button': isActive, 'bgc-primary': isActive, 'bgc-primary3': !isActive }"
+      class="px-4 py-2 rounded hover:bgc-primary hover:shadow-button transition duration-300 border-0 color-white text-3.5"
     ></button>
   </div>
 </th:block>

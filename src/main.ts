@@ -2,15 +2,9 @@ import "./styles/main.css";
 import "./styles/lapis/lapis.css";
 import "./styles/lapis/lapis-dark.css";
 import "virtual:uno.css";
+import Alpine from "alpinejs";
 
-export function init() {
-  document.querySelectorAll(".menu-button").forEach((button) => {
-    if (button.getAttribute("href") === window.location.pathname) {
-      button.classList.add("selected");
-      button.classList.add("shadow-button");
-    }
-  });
-}
+window.Alpine = Alpine;
 
 export function enableResizeImage() {
   // Resize images automatically, set width to 80%, or 100% for small screens
@@ -41,3 +35,5 @@ export function enableResizeImage() {
 
   window.addEventListener("resize", resizeImage);
 }
+
+Alpine.start();

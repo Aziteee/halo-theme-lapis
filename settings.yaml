@@ -9,8 +9,9 @@ spec:
       formSchema:
         - $formkit: checkbox
           name: enable_resize_image
-          label: 自动缩放图片
+          label: 自动调整图片大小
           value: true
+          help: 开启后，文章内的图片会根据不同设备的屏幕大小自动调整宽高并居中。
         - $formkit: text
           name: beian
           label: 备案号

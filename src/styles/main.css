@@ -38,7 +38,3 @@ button.selected {
 .hljs-copy-wrapper {
   border-radius: 5px;
 }
-
-.shadow-button {
-  box-shadow: rgba(0, 0, 0, 0.10) 0px 4px 6px;
-}
