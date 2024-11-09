@@ -38,6 +38,7 @@
     ]
   },
   "devDependencies": {
+    "@iconify-json/material-symbols": "^1.2.6",
     "@types/alpinejs": "^3.13.10",
     "@types/node": "18.11.9",
     "@typescript-eslint/eslint-plugin": "^5.62.0",
