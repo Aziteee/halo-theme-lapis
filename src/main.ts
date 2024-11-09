@@ -38,16 +38,15 @@ export function enableResizeImage() {
 
 Alpine.data("prefersColorScheme", () => ({
   colorScheme: "light",
-  colorSchemeQuery: {},
+  colorSchemeQuery: window.matchMedia("(prefers-color-scheme: dark)"),
   init() {
-    this.colorSchemeQuery = window.matchMedia("(prefers-color-scheme: dark)");
-    (this.colorSchemeQuery as MediaQueryList).addEventListener("change", () => {
+    this.colorSchemeQuery.addEventListener("change", () => {
       this.updateColorScheme();
     });
     this.updateColorScheme();
   },
   updateColorScheme() {
-    this.colorScheme = (this.colorSchemeQuery as MediaQueryList).matches ? "dark" : "light";
+    this.colorScheme = this.colorSchemeQuery.matches ? "dark" : "light";
   },
 }));
 
