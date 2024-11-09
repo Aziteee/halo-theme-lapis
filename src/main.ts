@@ -17,14 +17,14 @@ export function enableResizeImage() {
       img.removeAttribute("height");
 
       const aspectRatio: number = img.naturalHeight / img.naturalWidth;
-      if (aspectRatio > 1.5) {
-        img.style.height = "300px";
-      } else {
-        if (screenWidth > 768) {
-          img.style.width = "80%";
-        } else {
-          img.style.width = "100%";
+
+      if (screenWidth > 768) {
+        img.style.width = "80%";
+        if (aspectRatio > 1.5) {
+          img.style.width = "50%";
         }
+      } else {
+        img.style.width = "100%";
       }
 
       // Center the image
@@ -40,15 +40,15 @@ Alpine.data("prefersColorScheme", () => ({
   colorScheme: "light",
   colorSchemeQuery: {},
   init() {
-      this.colorSchemeQuery = window.matchMedia("(prefers-color-scheme: dark)");
-      (this.colorSchemeQuery as MediaQueryList).addEventListener("change", () => {
-        this.updateColorScheme();
-      });
+    this.colorSchemeQuery = window.matchMedia("(prefers-color-scheme: dark)");
+    (this.colorSchemeQuery as MediaQueryList).addEventListener("change", () => {
       this.updateColorScheme();
+    });
+    this.updateColorScheme();
   },
   updateColorScheme() {
-    this.colorScheme = (this.colorSchemeQuery as MediaQueryList).matches? "dark" : "light";
-  }
+    this.colorScheme = (this.colorSchemeQuery as MediaQueryList).matches ? "dark" : "light";
+  },
 }));
 
 Alpine.start();
