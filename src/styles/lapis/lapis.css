@@ -39,6 +39,10 @@
     /* Comment Plugin */
     --halo-comment-widget-component-form-button-submit-bg-color: var(--primary-color);
     --halo-comment-widget-component-form-button-submit-border-color: var(--primary-color);
+
+    /* HyperLink Plugin */
+    --halo-hyperlink-card-link-color: var(--secendary-text-color);
+    --halo-hyperlink-card-border-hover-color: var(--primary3-color);
 }
 
 @media print {
