@@ -1,5 +1,5 @@
 <p align="center">
-  <img alt="Lapis Logo" src="https://s21.ax1x.com/2024/11/07/pAyM9ot.png" width="100">
+  <img alt="Lapis Logo" style="border-radius: 10px;" src="https://s21.ax1x.com/2024/11/07/pAyM9ot.png" width="100">
 </p>
 
 <h1 align="center">Halo Theme Lapis</h1>
