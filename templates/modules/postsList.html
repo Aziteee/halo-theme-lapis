@@ -1,8 +1,8 @@
 <div class="flex flex-col gap-5" th:fragment="postsList (posts)">
-  <div
+  <a
     th:each="post : ${posts.items}"
-    class="flex flex-col p-y-4 p-x-4 hover:shadow-card transition duration-300 rounded-lg cursor-default"
-    th:onclick="|window.location.href='@{${post.status.permalink}}'|"
+    class="flex flex-col p-y-4 p-x-4 hover:shadow-card transition duration-300 rounded-lg cursor-default no-underline"
+    th:href="@{${post.status.permalink}}"
   >
     <span th:text="${post.spec.title}" class="text-lg font-semibold mb-3 textc-primary"></span>
     <div th:text="${post.status?.excerpt + '...'}" class="mb-2"></div>
@@ -13,7 +13,7 @@
         <div class="i-material-symbols:arrow-right-alt-rounded textc-primary mt-0.5"></div>
       </div>
     </div>
-  </div>
+  </a>
   <div class="flex justify-between items-center my-8 p-x-4">
     <div>
       <a
