@@ -1,5 +1,5 @@
 <p align="center">
-  <img alt="Lapis Logo" style="border-radius: 10px;" src="https://s21.ax1x.com/2024/11/07/pAyM9ot.png" width="100">
+  <img alt="Lapis Logo" src="https://s21.ax1x.com/2024/11/07/pAyM9ot.png" width="100">
 </p>
 
 <h1 align="center">Halo Theme Lapis</h1>
@@ -8,7 +8,7 @@
 
 <p align="center"><a target="_blank" href="https://github.com/YiNNx/typora-theme-lapis">根据 Typora 主题 lapis 二次开发</a></p>
 
-[![pAyefH0.png](https://s21.ax1x.com/2024/11/07/pAyefH0.png)](https://imgse.com/i/pAyefH0)
+[![pA2yYf1.png](https://s21.ax1x.com/2024/11/16/pA2yYf1.png)](https://imgse.com/i/pA2yYf1)
 
 ## 预览
 
@@ -17,6 +17,8 @@
 ## 插件支持
 
 - [X] 友情链接（/links）：https://halo.run/store/apps/app-hfbQg
+
+> 注：在链接 -> 分组中为分组添加 key 为 `description` 的元数据即可在每个组名下显示一段说明
 
 ## TODO
 
