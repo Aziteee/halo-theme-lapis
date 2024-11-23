@@ -341,7 +341,6 @@ blockquote h6.md-focus:before {
     word-wrap: break-word;
     padding: 2px 4px 2px;
     border-radius: 4px;
-    margin: 2px;
     background-color: var(--block-bg-color);
     font-family: JetBrainsMono, Consolas, Monaco, 'Andale Mono', monospace;
     word-break: break-all;

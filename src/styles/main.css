@@ -38,3 +38,13 @@ button.selected {
 .hljs-copy-wrapper {
   border-radius: 5px;
 }
+
+.write pre {
+  background-color: var(--block-bg-color) !important;
+  border-radius: 6px;
+}
+
+/* 适配 Shiki */
+.write .shiki.shiki-themes {
+  background-color: var(--block-bg-color) !important;
+}
