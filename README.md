@@ -17,14 +17,15 @@
 ## 插件支持
 
 - [X] 友情链接（/links）：https://halo.run/store/apps/app-hfbQg
+- [X] 瞬间（/moments）：https://halo.run/store/apps/app-SnwWD
 
 > 注：在链接 -> 分组中为分组添加 key 为 `description` 的元数据即可在每个组名下显示一段说明
 
 ## TODO
 
-- [x] 适配深色模式
+- [X] 适配深色模式
+- [X] 支持[瞬间](https://halo.run/store/apps/app-SnwWD)插件
 - [ ] 支持显示文章分类、标签等信息
-- [ ] 支持[瞬间](https://halo.run/store/apps/app-SnwWD)插件
 - [ ] 自定义页面标题
 - [ ] 自定义主题色
 
