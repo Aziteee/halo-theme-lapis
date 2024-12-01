@@ -334,7 +334,7 @@ blockquote h6.md-focus:before {
  * Inline code
  */
 
-.write code {
+.write code, .shiki-magic-move-container {
     color: var(--primary-color);
     font-size: 94%;
     font-weight: normal;

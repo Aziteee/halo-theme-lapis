@@ -1,0 +1,22 @@
+<div class="flex justify-between items-center my-8 p-x-4" th:fragment="pagination (items)">
+  <div>
+    <a
+      th:href="@{${items.prevUrl}}"
+      th:if="${items.hasPrevious()}"
+      class="pr-2.5 flex items-center cursor-default no-underline border border-solid border-2 borderc-primary p-1.5 text-sm rounded hover:bgc-primary hover:text-white transition duration-300"
+    >
+      <span class="i-material-symbols:chevron-left-rounded inline-block size-4 mt-0.25"></span>
+      <span class="text-inherit">Previous Page</span>
+    </a>
+  </div>
+  <div>
+    <a
+      th:href="@{${items.nextUrl}}"
+      th:if="${items.hasNext()}"
+      class="pl-2.5 flex items-center cursor-default no-underline border border-solid border-2 borderc-primary p-1.5 text-sm rounded hover:bgc-primary hover:text-white transition duration-300"
+    >
+      <span class="text-inherit">Next Page</span>
+      <span class="i-material-symbols:chevron-right-rounded inline-block size-4 mt-0.25"></span>
+    </a>
+  </div>
+</div>
