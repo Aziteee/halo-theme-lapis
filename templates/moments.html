@@ -7,18 +7,25 @@
     <div class="write">
       <div>
         <h3 class="ml-4">Moments</h3>
-        <ul class="!list-none space-y-2xl moments">
+        <ul class="!list-none space-y-3xl moments">
           <li class="!text-left" th:each="moment : ${moments.items}" th:with="content = ${moment.spec.content}">
             <time
               class="bgc-primary3 text-white text-3.5 py-1 px-2 rounded-xl"
               th:text="${#dates.format(moment.spec.releaseTime, 'yyyy-MM-dd')}"
             ></time>
             <div th:if="${not #strings.isEmpty(content.html)}" th:utext="${content.html}"></div>
-            <th:block th:if="${not #lists.isEmpty(content.medium)}" th:each="momentItem : ${content.medium}">
-              <img th:if="${momentItem.type.name == 'PHOTO'}" th:src="${momentItem.url}" />
-              <video th:if="${momentItem.type.name == 'VIDEO'}" th:src="${momentItem.url}"></video>
-              <audio th:if="${momentItem.type.name == 'AUDIO'}" th:src="${momentItem.url}" controls="true"></audio>
-            </th:block>
+            <div
+              th:unless="${#lists.isEmpty(moment.spec.content.medium)}"
+              class="moment-media mt-4 grid w-full grid-cols-3 gap-2 sm:w-1/2"
+            >
+              <div class="aspect-square" th:each="momentItem : ${content.medium}">
+                <img
+                  th:if="${momentItem.type.name == 'PHOTO'}"
+                  class="size-full object-cover"
+                  th:src="${momentItem.url}"
+                />
+              </div>
+            </div>
           </li>
         </ul>
         <th:block th:replace="~{modules/pagination :: pagination(items=${moments})}"></th:block>

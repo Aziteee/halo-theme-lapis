@@ -7,6 +7,10 @@ import Alpine from "alpinejs";
 window.Alpine = Alpine;
 
 export function enableResizeImage() {
+  if (window.location.pathname === "/moments") {
+    return;
+  }
+
   // Resize images automatically, set width to 80%, or 100% for small screens
   function resizeImage(): void {
     const images: NodeListOf<HTMLImageElement> = document.querySelectorAll(".write img");
