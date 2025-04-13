@@ -17,6 +17,17 @@ spec:
           label: 备案号
           value: ""
           help: 备案号会显示在所有页面最下方
+        - $formkit: text
+          name: gongan_text
+          label: 公安备案号
+          value: ""
+          help: 公安备案号文字部分
+        - $formkit: text
+          name: gongan_link
+          label: 公安备案链接
+          value: "https://beian.mps.gov.cn/#/query/webSearch?code="
+          help: 公安备案号的链接，在code后面添加公安备案号的数字部分即可跳转到对应的公安备案信息页面
+
     - group: links
       label: 链接
       formSchema:

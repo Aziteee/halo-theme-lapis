@@ -1,14 +1,23 @@
 <footer fragment="footer" class="py-4">
   <div class="container mx-auto text-center text-sm mb-2">
-    <p class="mb-0">
-      © [[${#dates.format(#dates.createNow(), 'yyyy')}]] [[${site.title}]]. All rights reserved.
-    </p>
+    <p class="mb-0">© [[${#dates.format(#dates.createNow(), 'yyyy')}]] [[${site.title}]]. All rights reserved.</p>
     <th:block th:if="${theme.config.global.beian!=''}">
       <a
-         th:text="${theme.config.global.beian}"
-         href="https://beian.miit.gov.cn"
-         target="_blank"
-         class="line-height-loose no-underline color-inherit"></a>
+        th:text="${theme.config.global.beian}"
+        href="https://beian.miit.gov.cn"
+        target="_blank"
+        class="line-height-loose no-underline color-inherit"
+      ></a>
+    </th:block>
+    <th:block th:if="${theme.config.global.gongan_text!=''}">
+      <!-- <img src="https://beian.mps.gov.cn/web/assets/logo01.6189a29f.png" width="20"/> -->
+      <img th:src="@{/assets/images/gongan.png}" width="20" />
+      <a
+        th:text="${theme.config.global.gongan_text}"
+        th:href="${theme.config.global.gongan_link}"
+        target="_blank"
+        class="line-height-loose no-underline color-inherit"
+      ></a>
     </th:block>
   </div>
 </footer>
